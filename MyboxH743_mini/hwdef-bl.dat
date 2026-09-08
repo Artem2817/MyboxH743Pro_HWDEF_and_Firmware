@@ -1,11 +1,11 @@
 # hw definition file for processing by chibios_pins.py
-# for MyboxH743 bootloader
+# for MyboxH743_mini bootloader
 
 # MCU class and specific type
 MCU STM32H7xx STM32H743xx
 
 # board ID. See Tools/AP_Bootloader/board_types.txt
-APJ_BOARD_ID 1488
+APJ_BOARD_ID 1478
 
 # crystal frequency, setup to use external oscillator
 OSCILLATOR_HZ 8000000
@@ -33,12 +33,6 @@ PA12 OTG_FS_DP OTG1
 
 PA13 JTMS-SWDIO SWD
 PA14 JTCK-SWCLK SWD
-
-# make sure Vsw is on during bootloader
-PD10  PINIO1 OUTPUT LOW
-
-# Pin for PWM Voltage Selection
-PB2 PWM_VOLT_SEL OUTPUT HIGH
 
 PE4 LED_BOOTLOADER OUTPUT LOW
 define HAL_LED_ON 0
